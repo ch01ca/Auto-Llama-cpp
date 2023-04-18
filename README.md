@@ -15,6 +15,22 @@ Since this uses [llama.cpp](https://github.com/ggerganov/llama.cpp) under the ho
 * Vicuna
 * Koala
 
+## Installation
+run these commands
+
+git clone https://github.com/rhohndorf/Auto-Llama-cpp.git
+cd Auto-Llama-cpp
+pip install -r requirements.txt
+
+Download https://huggingface.co/eachadea/legacy-ggml-vicuna-13b-4bit/resolve/main/ggml-vicuna-13b-4bit.bin (8GB) and place it in your models folder (for testing I made one in the root directory of this project with another folder called 13B for the size but if you're trying out multiple llms you'll likely have a folder somewhere else for all of them)
+
+Rename "env.template" file to ".env" changing any environment variables that you need (like the path to your recently downloaded model)
+
+run this command to start
+
+python scripts/main.py
+
+once you have things running and can see what it does, try changing ai_settings.yml and scripts/data/prompt.txt to change how the ai behaves
 ## Model Performance (the experience so far)
 ---
 
